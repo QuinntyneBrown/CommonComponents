@@ -1,0 +1,37 @@
+{
+  "projects": null,
+  "path": "C:\\Projects\\CommonComponents",
+  "solutionName": null,
+  "rootNamespace": null,
+  "domainNamespace": "CommonComponents.Api",
+  "applicationNamespace": "CommonComponents.Api",
+  "infrastructureNamespace": "CommonComponents.Api",
+  "apiNamespace": "CommonComponents.Api",
+  "domainDirectory": "C:\\Projects\\CommonComponents\\src\\CommonComponents.Api",
+  "applicationDirectory": "C:\\Projects\\CommonComponents\\src\\CommonComponents.Api",
+  "infrastructureDirectory": "C:\\Projects\\CommonComponents\\src\\CommonComponents.Api",
+  "apiDirectory": "C:\\Projects\\CommonComponents\\src\\CommonComponents.Api",
+  "appDirectories": [
+    "C:\\Projects\\CommonComponents\\src\\CommonComponents.App"
+  ],
+  "buildingBlocksCoreNamespace": "BuildingBlocks.Core",
+  "buildingBlocksEventStoreNamespace": "BuildingBlocks.EventStore",
+  "store": null,
+  "namespace": null,
+  "domain": null,
+  "core": null,
+  "api": null,
+  "entityIdDataType": null,
+  "sourceFolder": "src",
+  "testFolder": null,
+  "dbContext": "CommonComponentsDbContext",
+  "eventSourcing": false,
+  "resources": [
+    "Component",
+    "Portal",
+    "PortalComponent",
+    "StoredEvent",
+    "DigitalAsset",
+    "Page"
+  ]
+}

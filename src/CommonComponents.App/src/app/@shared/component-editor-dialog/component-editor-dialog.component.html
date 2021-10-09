@@ -1,0 +1,35 @@
+<ng-container *ngIf="vm$ | async as vm">
+  <form [formGroup]="vm.form">
+    <ng-container formGroupName="portal">
+      <mat-form-field appearance="outline">
+        <mat-label>Portal</mat-label>
+        <input type="text"
+              placeholder="Portal"
+              aria-label="Portal"
+              matInput
+              formControlName="name"
+              [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of vm.portals" [value]="option.name">
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </ng-container>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <h3>Description</h3>
+    <app-html-editor formControlName="description">
+
+    </app-html-editor>
+  </form>
+
+  <div class="g-actions">
+    <button>Save</button>
+    <button [mat-dialog-close]>Cancel</button>
+  </div>
+</ng-container>
