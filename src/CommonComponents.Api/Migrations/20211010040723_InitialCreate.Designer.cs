@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CommonComponents.Api.Migrations
 {
     [DbContext(typeof(CommonComponentsDbContext))]
-    [Migration("20211009144850_InitialCreate")]
+    [Migration("20211010040723_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,21 @@ namespace CommonComponents.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<byte[]>("Bytes")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("ContentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Height")
+                        .HasColumnType("real");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Width")
+                        .HasColumnType("real");
+
                     b.HasKey("DigitalAssetId");
 
                     b.ToTable("DigitalAssets");
@@ -53,6 +68,15 @@ namespace CommonComponents.Api.Migrations
                 {
                     b.Property<Guid>("PageId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("PortalId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("PageId");

@@ -9,7 +9,9 @@ namespace CommonComponents.Api.Features
         {
             return new ()
             {
-                PortalId = portal.PortalId
+                PortalId = portal.PortalId,
+                Name = portal.Name,
+                Description = portal.Description
             };
         }
         

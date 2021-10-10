@@ -25,6 +25,27 @@ namespace CommonComponents.Api.DomainEvents
         }
     }
 
+    public class QueryOrCreatePortal: BaseDomainEvent
+    {
+        public string Name { get; private set; }
+
+        public QueryOrCreatePortal(string name)
+        {
+            Name = name;
+        }
+    }
+
+
+    public class QueriedOrCreatedPortal : BaseDomainEvent
+    {
+        public Guid PortalId { get; private set; }
+
+        public QueriedOrCreatedPortal(Guid portalId)
+        {
+            PortalId = portalId;
+        }
+    }
+
     public class RemovePortal : BaseDomainEvent
     {
 

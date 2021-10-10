@@ -1,1 +1,10 @@
+<ng-container *ngIf="vm$ | async as vm">
 
+  <h1>Component List</h1>
+
+  <button mat-raised-button (click)="open(vm.portals)">Create</button>
+
+  <h2 *ngFor="let component of vm.components">
+    {{ component.name }}
+  </h2>
+</ng-container>

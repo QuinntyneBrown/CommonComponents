@@ -6,7 +6,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HtmlEditorModule } from '@shared/html-editor';
-
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { HtmlEditorModule } from '@shared/html-editor';
     MatAutocompleteModule,
     MatInputModule,
     ReactiveFormsModule,
-    HtmlEditorModule
+    HtmlEditorModule,
+    MatButtonModule
   ]
 })
 export class ComponentEditorDialogModule { }

@@ -1,7 +1,8 @@
 <ng-container *ngIf="vm$ | async as vm">
+  <h1>Create Component</h1>
   <form [formGroup]="vm.form">
     <ng-container formGroupName="portal">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="g-form-field">
         <mat-label>Portal</mat-label>
         <input type="text"
               placeholder="Portal"
@@ -17,19 +18,23 @@
       </mat-form-field>
     </ng-container>
 
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="g-form-field">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name">
     </mat-form-field>
 
-    <h3>Description</h3>
-    <app-html-editor formControlName="description">
+    <div class="g-form-field component-editor-dialog__description">
+      <h3>Description</h3>
+      <app-html-editor formControlName="description">
 
-    </app-html-editor>
+      </app-html-editor>
+    </div>
+
   </form>
 
   <div class="g-actions">
-    <button>Save</button>
-    <button [mat-dialog-close]>Cancel</button>
+    <button mat-stroked-button [mat-dialog-close]>Cancel</button>
+    <button mat-raised-button (click)="save(vm.form.value)">Save</button>
+
   </div>
 </ng-container>

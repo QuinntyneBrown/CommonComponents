@@ -18,6 +18,11 @@ namespace CommonComponents.Api.DomainEvents
         }
     }
 
+    public class CreatedPortalComponent: BaseDomainEvent
+    {
+
+    }
+
     public class UpdatePortalComponentDescription : BaseDomainEvent
     {
         public string Description { get; private set; }

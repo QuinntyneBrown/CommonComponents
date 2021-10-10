@@ -24,7 +24,12 @@ namespace CommonComponents.Api.Migrations
                 name: "DigitalAssets",
                 columns: table => new
                 {
-                    DigitalAssetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    DigitalAssetId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Bytes = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    ContentType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Height = table.Column<float>(type: "real", nullable: false),
+                    Width = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -35,7 +40,10 @@ namespace CommonComponents.Api.Migrations
                 name: "Pages",
                 columns: table => new
                 {
-                    PageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    PageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PortalId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

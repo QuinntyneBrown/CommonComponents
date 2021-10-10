@@ -39,7 +39,9 @@ namespace CommonComponents.Api.Features
         
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
-                var portalComponent = new PortalComponent();
+                var portalComponent = new PortalComponent(
+                    new DomainEvents.CreatePortalComponent(default,default,default)
+                    );
                 
                 _context.PortalComponents.Add(portalComponent);
                 

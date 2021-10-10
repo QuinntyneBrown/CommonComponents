@@ -28,7 +28,8 @@ namespace CommonComponents.Api.Features
         
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
-                return new () {
+                return new()
+                {
                     Components = await _context.Components.Select(x => x.ToDto()).ToListAsync()
                 };
             }

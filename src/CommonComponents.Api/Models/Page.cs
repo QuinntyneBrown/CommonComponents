@@ -16,6 +16,11 @@ namespace CommonComponents.Api.Models
 
         }
 
+        private Page()
+        {
+
+        }
+
         protected override void When(dynamic @event) => When(@event);
 
         protected override void EnsureValidState()

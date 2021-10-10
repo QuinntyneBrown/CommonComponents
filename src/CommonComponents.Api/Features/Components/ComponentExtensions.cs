@@ -9,9 +9,10 @@ namespace CommonComponents.Api.Features
         {
             return new ()
             {
-                ComponentId = component.ComponentId
+                ComponentId = component.ComponentId,
+                Name = component.Name,
+                Description = component.Description
             };
-        }
-        
+        }        
     }
 }
